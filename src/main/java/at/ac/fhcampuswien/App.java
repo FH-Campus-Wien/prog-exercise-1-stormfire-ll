@@ -26,22 +26,29 @@ public class App {
     //todo Task 3
     public void sumOfLiterals(){
 
-        char z = 'Z';
-        String oxface = "0xface";
+        int sum = 0;
+        char z1 = 'Z';
+        int hex = 0xface;
         int octal = 012;
-        String volume = "80L";
-        float height = 44e-1f; //?
-        float outcome = 5.5f;
-        double length = 8.88e1;
-        float num = 99.9f;
+        long l1 = 80L;
+        float f1 = 44e-1f;
+        float f2 = 5.5f;
+        double d1 = 8.88e1;
+        double d1a = (int) d1;
+        double d2 = 99.9f;
+        double d2a = (int)d2;
 
-        int sum;
-        int x = 1;
-        int y = 2;
-        int a = 3;
-        int c = 4;
-        int d = 5;
-        sum = x + y + a + c + d;
+        sum = sum + z1;
+        sum += hex;
+        sum += octal;
+        sum += l1;
+        sum += f1;
+        sum += f2;
+        sum += d1;
+        sum += d1a;
+        sum += d2;
+        sum += d2a;
+
         System.out.println(sum);
     }
 
@@ -61,15 +68,14 @@ public class App {
     //todo Task 5
     public void swapTwoNumbers(){
         Scanner scanner = new Scanner(System.in);
-
         int x;
         int y;
 
         System.out.println("Before Swap:");
+        System.out.print("x: ");
         x = scanner.nextInt();
-        System.out.println("x: " + x);
+        System.out.print("y: ");
         y = scanner.nextInt();
-        System.out.println("y: " + y);
         System.out.println("After Swap:");
         x = x + y;
         y = x - y;
@@ -111,16 +117,16 @@ public class App {
         if (revenue < 0 | revenue >= 100000) {
             System.out.println("Invalid Revenue");
             System.out.println();
-        } else if (0 <= revenue < 20000){
+        } else if (0 <= revenue && revenue < 20000){
             System.out.println("Poor Sales Revenue");
             System.out.println();
-        } else if (0 <= revenue <= 50000){
+        } else if (0 <= revenue && revenue <= 50000){
         System.out.println("Average Sales Revenue");
         System.out.println();
-        } else if (0 <= revenue <= 80000){
+        } else if (0 <= revenue && revenue <= 80000){
             System.out.println("Good Sales Revenue");
             System.out.println();
-        } else if (0 <= revenue <= 100000){
+        } else if (0 <= revenue && revenue <= 100000){
             System.out.println("Excellent Sales Revenue");
             System.out.println();
         }
@@ -181,12 +187,12 @@ public class App {
         int z2;
 
         System.out.print("Number: ");
-        num = scanner.nextInt(); //123
+        num = scanner.nextInt();
 
-        z1 = num % 10; //=3
-        temp = num / 10; // = 12
-        z2 = temp % 10; // = 2
-        temp = temp % 10; // = 1
+        z1 = num % 10;
+        temp = num / 10;
+        z2 = temp % 10;
+        temp = temp % 10;
 
         System.out.println(z1 * 100 + z2 * 10 + temp * 1);
     }
