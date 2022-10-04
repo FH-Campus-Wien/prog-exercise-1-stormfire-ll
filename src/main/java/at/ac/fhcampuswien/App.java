@@ -84,7 +84,9 @@ public class App {
         int n1;
         int n2;
 
+        System.out.print("n1: ");
         n1 = scanner.nextInt();
+        System.out.print("n2: ");
         n2 = scanner.nextInt();
 
         if (n1 != n2) {
@@ -100,12 +102,55 @@ public class App {
 
     //todo Task 7
     public void ratingSalesPerson(){
-        // input your solution here
+        Scanner scanner = new Scanner(System.in);
+        int revenue;
+
+        System.out.print("Enter annual Revenue: ");
+        revenue = scanner.nextInt();
+
+        if (revenue < 0 | revenue >= 100000) {
+            System.out.println("Invalid Revenue");
+            System.out.println();
+        } else if (0 <= revenue < 20000){
+            System.out.println("Poor Sales Revenue");
+            System.out.println();
+        } else if (0 <= revenue <= 50000){
+        System.out.println("Average Sales Revenue");
+        System.out.println();
+        } else if (0 <= revenue <= 80000){
+            System.out.println("Good Sales Revenue");
+            System.out.println();
+        } else if (0 <= revenue <= 100000){
+            System.out.println("Excellent Sales Revenue");
+            System.out.println();
+        }
     }
 
     //todo Task 8
     public void getCommissionRate(){
-        // input your solution here
+        Scanner scanner = new Scanner(System.in);
+        int commissionClass;
+
+        System.out.print("Enter CommissionClass: ");
+        commissionClass = scanner.nextInt();
+
+        switch(commissionClass) {
+            case 1:
+                System.out.println("Your Commission Rate was set to  0.01");
+                break;
+            case 2:
+                System.out.println("Your Commission Rate was set to  0.02");
+                break;
+            case 3:
+                System.out.println("Your Commission Rate was set to  0.03");
+                break;
+            case 4:
+                System.out.println("Your Commission Rate was set to  0.04");
+                break;
+            case 5:
+                System.out.println("Your Commission Rate was set to  0.00");
+                break;
+        }
     }
 
     //todo Task 9
@@ -113,15 +158,37 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         int year;
 
+        System.out.print("Year: ");
         year = scanner.nextInt();
-        System.out.println("Year: " + year);
 
-        if (year % 4 != 0)
+        if (year % 4 == 0){
+            System.out.println("Leapyear");
+        } else if (year % 100 == 0 && year % 400 != 0){
+            System.out.println("Not a Leapyear");
+        } else if (year % 400 == 0){
+            System.out.println("Leapyear");
+        } else {
+            System.out.println("Not a Leapyear");
+        }
     }
 
     //todo Task 10
     public void transposedNumbers(){
+        Scanner scanner = new Scanner(System.in);
+        int num;
+        int z1;
+        int temp;
+        int z2;
 
+        System.out.print("Number: ");
+        num = scanner.nextInt(); //123
+
+        z1 = num % 10; //=3
+        temp = num / 10; // = 12
+        z2 = temp % 10; // = 2
+        temp = temp % 10; // = 1
+
+        System.out.println(z1 * 100 + z2 * 10 + temp * 1);
     }
 
 
