@@ -182,19 +182,16 @@ public class App {
     public void transposedNumbers(){
         Scanner scanner = new Scanner(System.in);
         int num;
-        int z1;
-        int temp;
-        int z2;
 
         System.out.print("Number: ");
         num = scanner.nextInt();
 
-        z1 = num % 10;
-        temp = num / 10;
-        z2 = temp % 10;
-        temp = temp % 10;
+        int z1 = num % 10;
+        int temp1 = num / 10;
+        int z2 = temp1 % 10;
+        int temp2 = temp1 % 10;
 
-        System.out.println(z1 * 100 + z2 * 10 + temp * 1);
+        System.out.println(z1 * 100 + z2 * 10 + temp2 * 1);
     }
 
 
